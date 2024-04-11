@@ -1,18 +1,20 @@
 <?php
-include './partials/connection.php';
-try{
-    $sql = "select * from `user`;";
-    $state = $conn->query($sql);
+include "./partials/Connection.php";
+
+try {
+    $SQL = "SELECT * FROM user;";
+    $state = $conn->query($SQL);
+    
     $json = [];
-    while($row = $state->fetch(PDO::FETCH_ASSOC)){
-        array_push($json,[
+    while ($row = $state->fetch(PDO::FETCH_ASSOC)) {
+        $json[] = [
             "id" => $row['id'],
-            "fullname" => "{$row['firstname']} {$row['lastname']}" 
-        ]);
+            'fullname' => "{$row['firstname']} {$row['lastname']}"
+        ];
     }
+    
     echo json_encode($json);
-}catch(PDOException $e){
+} catch (PDOException $e) { 
     die($e->getMessage());
 }
-
 ?>

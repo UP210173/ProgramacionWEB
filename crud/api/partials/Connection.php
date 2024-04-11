@@ -3,7 +3,7 @@
 $host = "localhost";
 $dbName = "tasks";
 $user = "root";
-$password = "";
+$password = "MopC210173";
 $protocol = "mysql:host={$host};dbname={$dbName}";
 try {
   // Generación de la Conexion a la base de datos
