@@ -1,5 +1,9 @@
 <?php
-include "./partials/connection.php";
+include "./partials/Connection.php";
+
+$userId = $_POST['users'];
+$taskTitle = $_POST['title'];
+$completed = $_POST['completed'];
 
 try {
     $SQL_ID = "SELECT MAX(id) FROM `task`;";
