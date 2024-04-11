@@ -1,9 +1,9 @@
 <?php
 
 $host = "localhost";
-$dbName = "todoApp";
+$dbName = "tasks";
 $user = "root";
-$password = "ferny2425";
+$password = "";
 $protocol = "mysql:host={$host};dbname={$dbName}";
 try {
   // Generación de la Conexion a la base de datos
